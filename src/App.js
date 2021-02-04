@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute';
+import Login from './components/Login';
+import Register from './components/Register';
+import authAction from './redux/actions/auth';
+import CheckList from './components/CheckList'
+import { connect } from 'react-redux';
+class App extends Component {
+  componentDidMount() {
+    if (localStorage.getItem('token') !== null) {
+      this.props.setToken(localStorage.getItem('token'));
+    }
+  }
+  render() {
+    return (
+      <>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <BrowserRouter>
+          <Switch>
+            <Route path="/login" component={Login} exact/>
+            <Route path="/register" component={Register} />
+            <PrivateRoute >
+              <CheckList />
+            </PrivateRoute>
+
+          </Switch>
+        </BrowserRouter>
+      </>
+    );
+  }
 }
-
-export default App;
+const mapStateToProps = (state) => ({
+  
+});
+const mapDispatchToProps = {
+  setToken: authAction.setToken,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);

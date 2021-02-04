@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+.message{
+  font-weight: bold;
+  font-size:18px;
+  color:#222;
+  }
+  .button{
+  width: 123px;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #9b9b9b;
+  color: #9b9b9b;
+  }
+  .button:focus{
+  outline: none;
+  color: #fff;
+  background: #DB3022;
+  }
+  .button.first{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right-width: 0;
+  }
+  .button.second{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left-width: 0;
+  }
+  .loginBtn{
+  width: 100%;
+  border-radius: 25px;
+  border:0;
+  background: #DB3022;
+  color:#fff
+  }
+  .forgot{
+  color:#DB3022;
+  }
+  .textField{
+  width:400px;
+  height: 48px;
+  
+  }
+  .bgBtn{
+  background: #DB3022;
+  width: 401px;
+  height:48px;
+  border-radius:25px;
+  color:white;
+  }
