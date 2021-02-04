@@ -1,3 +1,8 @@
+### `npm install`
+untuk menjalankan program
+
+### `note`
+jika terjadi error harap delete all localstorage ,untuk mendapatkan hasil login berhasil dan register dapat di lihat di perubahan reducers di CTRL+SHIFT+i serta token yang di dapat
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
